@@ -1,0 +1,58 @@
+---
+const products = [
+  {
+    name: "Pure Serum",
+    category: "Hydration",
+    price: "$45.00",
+    image: "/images/product-1.jpg"
+  },
+  {
+    name: "Night Cream",
+    category: "Repair",
+    price: "$58.00",
+    image: "/images/product-2.jpg"
+  },
+  {
+    name: "Morning Mist",
+    category: "Refresh",
+    price: "$32.00",
+    image: "/images/product-3.jpg"
+  }
+];
+---
+
+<section id="shop" class="container py-24">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+    <div class="space-y-4">
+      <span class="text-[11px] uppercase tracking-[0.4em] text-accent font-semibold">Our Shop</span>
+      <h2 class="text-4xl md:text-5xl font-display">Best Sellers</h2>
+    </div>
+    <div class="flex gap-8 text-[11px] uppercase tracking-widest font-medium">
+      <button class="text-ink border-b border-ink pb-1">All</button>
+      <button class="text-muted hover:text-ink transition-colors pb-1">Face</button>
+      <button class="text-muted hover:text-ink transition-colors pb-1">Body</button>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-12">
+    {products.map((product) => (
+      <div class="group cursor-pointer">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 relative bg-accent-light/20">
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <button class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-ink px-8 py-3 rounded-full text-[10px] uppercase tracking-widest font-bold opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 shadow-xl hover:bg-ink hover:text-white">
+            Quick Add
+          </button>
+        </div>
+        <div class="text-center space-y-1">
+          <span class="text-[10px] uppercase tracking-widest text-muted">{product.category}</span>
+          <h3 class="text-xl font-display">{product.name}</h3>
+          <p class="text-accent font-medium">{product.price}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

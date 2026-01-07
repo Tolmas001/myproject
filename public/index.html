@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowSkin — Organic & Natural Cosmetics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lucide/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">Glow<span>Skin</span></a>
+            
+            <div class="nav-links">
+                <a href="#" data-i18n="nav_shop">Shop</a>
+                <a href="#" data-i18n="nav_collections">Collections</a>
+                <a href="#" data-i18n="nav_philosophy">Philosophy</a>
+                <a href="#" data-i18n="nav_about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <span>/</span>
+                    <button class="lang-btn" data-lang="uz">UZ</button>
+                    <span>/</span>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button class="icon-btn"><i data-lucide="search"></i></button>
+                <div class="cart-wrapper">
+                    <button class="icon-btn cart-toggle">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <!-- Cart Dropdown -->
+                    <div class="cart-dropdown">
+                        <h4 data-i18n="cart_title">Shopping Cart</h4>
+                        <div class="cart-items">
+                            <!-- Items will be injected here -->
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span data-i18n="cart_total">Total:</span>
+                                <span class="total-amount">$0.00</span>
+                            </div>
+                            <button class="btn btn-primary btn-block" data-i18n="cart_checkout">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="subtitle" data-i18n="hero_new">New Collection 2026</span>
+                    <h1 data-i18n="hero_title">Beauty In Simplicity</h1>
+                    <p data-i18n="hero_desc">Experience the pure essence of nature with our dermatologically tested, organic skincare routine. Crafted for every skin type.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#shop" class="btn btn-primary" data-i18n="hero_cta">Shop Now</a>
+                        <a href="#" class="story-link">
+                            <span data-i18n="hero_story">Our Story</span>
+                            <span class="line"></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="val">98%</span>
+                            <span class="label" data-i18n="hero_feat1">Natural Ingredients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="val">100%</span>
+                            <span class="label" data-i18n="hero_feat2">Cruelty Free</span>
+                        </div>
+                        <div class="stat">
+                            <span class="val">24h</span>
+                            <span class="label" data-i18n="hero_feat3">Deep Hydration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="img-wrapper">
+                        <img src="images/cosmetics-hero.jpg" alt="Clean Beauty">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-icon">★</div>
+                        <p>"The best organic serum I've ever used. My skin feels reborn."</p>
+                        <span class="author">— Sophia, Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="shop">
+            <div class="container">
+                <div class="shop-header">
+                    <div class="shop-title">
+                        <span class="subtitle" data-i18n="shop_subtitle">Our Shop</span>
+                        <h2 data-i18n="shop_title">Best Sellers</h2>
+                    </div>
+                    <div class="shop-filters">
+                        <button class="active" data-i18n="shop_all">All</button>
+                        <button data-i18n="shop_face">Face</button>
+                        <button data-i18n="shop_body">Body</button>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="1" data-name="Pure Serum" data-price="45.00">
+                        <div class="product-img">
+                            <img src="images/product-1.jpg" alt="Pure Serum">
+                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Hydration</span>
+                            <h3>Pure Serum</h3>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="2" data-name="Night Cream" data-price="58.00">
+                        <div class="product-img">
+                            <img src="images/product-2.jpg" alt="Night Cream">
+                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Repair</span>
+                            <h3>Night Cream</h3>
+                            <p class="price">$58.00</p>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="3" data-name="Morning Mist" data-price="32.00">
+                        <div class="product-img">
+                            <img src="images/product-3.jpg" alt="Morning Mist">
+                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Refresh</span>
+                            <h3>Morning Mist</h3>
+                            <p class="price">$32.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <a href="/" class="logo">Glow<span>Skin</span></a>
+                <p data-i18n="footer_desc">We believe in the power of nature and the beauty of simplicity.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_discover">Discover</h4>
+                <ul>
+                    <li>Skincare</li>
+                    <li>Collections</li>
+                    <li>Sets & Kits</li>
+                    <li>Gift Cards</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_support">Support</h4>
+                <ul>
+                    <li>Shipping</li>
+                    <li>Returns</li>
+                    <li>Privacy</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p>© 2026 GLOWSKIN COSMETICS. ALL RIGHTS RESERVED.</p>
+                <div class="credits">
+                    <span>EST. 2026</span>
+                    <span>CRAFTED IN PARIS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

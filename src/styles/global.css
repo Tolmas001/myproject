@@ -1,39 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-dark: #200E08;
-  --color-dark-light: #2A140B;
-  --color-primary: #FF7F2A;
-  --color-primary-hover: #E66816;
-  --color-light: #F5F5F5;
-  --color-muted: #A0A0A0;
+  /* Colors - Cosmetics Theme */
+  --color-paper: #FDFBF7; /* Soft Cream */
+  --color-ink: #1A1A1A;   /* Deep Charcoal */
+  --color-accent: #C4A484; /* Soft Bronze/Tan */
+  --color-accent-light: #E5D3C0;
+  --color-muted: #717171;
+  --color-rose: #F4E4E4;
   
   /* Fonts */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-display: 'Playfair Display', serif;
   
   /* Border Radius */
   --radius-full: 9999px;
-  --radius-xl: 1.5rem;
+  --radius-xl: 1rem;
   --radius-2xl: 2rem;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
-    background: var(--color-dark);
-    color: var(--color-light);
+    background: var(--color-paper);
+    color: var(--color-ink);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 500;
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-6 md:px-8;
+    @apply max-w-7xl mx-auto px-6 md:px-12;
   }
   
   .btn {
@@ -41,11 +42,10 @@
   }
   
   .btn-primary {
-    background: linear-gradient(90deg, #FF914D 0%, #FF6B00 100%);
-    @apply text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5;
+    @apply bg-ink text-paper hover:bg-accent hover:text-white;
   }
   
   .btn-outline {
-    @apply border border-primary text-light hover:bg-primary/10;
+    @apply border border-ink text-ink hover:bg-ink hover:text-white;
   }
 }
