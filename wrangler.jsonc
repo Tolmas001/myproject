@@ -1,0 +1,18 @@
+/**
+ * Wrangler config for the web landing starter template
+ * STRICTLY DO NOT MODIFY THIS FILE - Hidden from AI to prevent breaking core functionality
+ 
+ */
+ {
+  "name": "web-landing-starter",
+  "main": "dist/index.js",
+  "compatibility_date": "2025-04-24",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  }
+}

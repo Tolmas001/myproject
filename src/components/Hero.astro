@@ -1,0 +1,90 @@
+---
+import { Zap, Play } from 'lucide-astro';
+---
+
+<section class="container relative pt-12 pb-24 md:pt-20 md:pb-32">
+  <!-- Background Watermark -->
+  <div class="absolute top-1/2 left-1/4 -translate-y-1/2 -z-10 select-none opacity-[0.03] pointer-events-none">
+    <span class="font-['Great_Vibes'] text-[15rem] leading-none whitespace-nowrap">Pizza</span>
+  </div>
+  <div class="absolute top-20 right-20 -z-10 select-none opacity-[0.03] pointer-events-none rotate-12">
+    <span class="font-['Great_Vibes'] text-[10rem] leading-none whitespace-nowrap">Pizza</span>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left Content -->
+    <div class="space-y-8 relative z-10">
+      <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+        The Fastest <br />
+        Pizza 
+        <span class="inline-flex items-center justify-center mx-2 align-middle">
+           <Zap class="text-primary fill-primary rotate-12 w-10 h-10 md:w-14 md:h-14" />
+        </span>
+        Delivery
+      </h1>
+      
+      <p class="text-muted text-lg max-w-md leading-relaxed">
+        We will deliver juicy pizza for your family in 30 minutes, if the courier is late - <span class="text-primary font-semibold">pizza is free</span>!
+      </p>
+      
+      <div class="flex flex-col gap-2">
+        <span class="text-muted text-sm">Cooking process:</span>
+        <div class="relative w-48 h-28 rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/20">
+          <img 
+            src="/images/cooking-process.jpg" 
+            alt="Cooking process" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full border-2 border-primary/80 flex items-center justify-center pl-1 backdrop-blur-sm transition-transform group-hover:scale-110">
+              <Play size={16} class="text-primary fill-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 pt-4">
+        <button class="btn btn-primary px-10">
+          To order
+        </button>
+        <button class="btn btn-outline px-10 rounded-full">
+          Pizza-Menu
+        </button>
+      </div>
+    </div>
+    
+    <!-- Right Content (Image) -->
+    <div class="relative z-10">
+      <!-- Orange Card Background -->
+      <div class="relative bg-gradient-to-br from-[#FF914D] to-[#FF6B00] rounded-[3rem] p-8 md:p-12 pb-0 overflow-hidden shadow-2xl shadow-primary/10">
+        
+        <!-- Decoration Ingredients (Simulated with circles for now as placeholders) -->
+        <div class="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shadow-inner">
+           <!-- Placeholder for sauce/bowl -->
+           <div class="w-12 h-12 rounded-full bg-[#8B0000] border-2 border-white/50"></div>
+        </div>
+        <div class="absolute top-12 right-12 w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shadow-inner">
+            <!-- Placeholder for cheese/bowl -->
+           <div class="w-16 h-16 rounded-full bg-[#FFFDD0] border-2 border-white/50"></div>
+        </div>
+
+        <!-- Main Pizza Image -->
+        <div class="relative mt-12 translate-x-8 translate-y-8 md:translate-x-12 md:translate-y-12">
+            <!-- White Plate Shape -->
+            <div class="bg-white rounded-[2.5rem] p-2 shadow-2xl rotate-[-5deg]">
+                 <img 
+                    src="/images/pizza-hero.jpg" 
+                    alt="Delicious Pizza" 
+                    class="w-full h-auto rounded-[2rem] object-cover aspect-square shadow-inner"
+                 />
+            </div>
+        </div>
+        
+        <!-- Background Flour/Particles Effect -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dust.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+      </div>
+    </div>
+    
+  </div>
+</section>

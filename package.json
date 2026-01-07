@@ -1,0 +1,20 @@
+{
+  "name": "web-landing-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && cp worker/index.js dist/",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "apify-client": "^2.21.0",
+    "astro": "^5.16.4",
+    "lucide-astro": "^0.556.0",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {}
+}
