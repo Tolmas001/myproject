@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Beauty - Online Do'kon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Glow Beauty</div>
+            <ul class="nav-links">
+                <li><a href="#home">Asosiy</a></li>
+                <li><a href="#products">Mahsulotlar</a></li>
+                <li><a href="#about">Biz haqimizda</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-icon" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </div>
+                <a href="register.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Go'zalligingizni biz bilan toping</h2>
+                <p>Eng sifatli va tabiiy kosmetika mahsulotlari faqat bizda.</p>
+                <a href="#products" class="btn-primary">Sotib olish</a>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <h2 class="section-title">Mahsulotlarimiz</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Mahsulotlar JS orqali qo'shiladi -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Savatcha -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Savatchangiz</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                Total: <span id="cartTotalSum">0</span> so'm
+            </div>
+            <button class="btn-primary">Buyurtma berish</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Glow Beauty. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
