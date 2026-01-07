@@ -29,6 +29,89 @@ body {
     padding: 0 40px;
 }
 
+/* Auth Overlay */
+.auth-locked {
+    overflow: hidden;
+}
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(253, 251, 247, 0.98);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.auth-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.auth-header h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: var(--paper);
+    font-family: var(--font-sans);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+}
+
+.auth-footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.auth-footer a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
 /* Navbar */
 .navbar {
     padding: 30px 0;
@@ -484,6 +567,37 @@ body {
     color: var(--accent);
     font-weight: 500;
 }
+
+/* Events Section */
+.events { padding: 100px 0; background: rgba(196, 164, 132, 0.05); }
+.section-header { margin-bottom: 60px; text-align: center; }
+.section-header h2 { font-family: var(--font-display); font-size: 48px; }
+.events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.event-card { background: white; border-radius: 20px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.event-img { width: 40%; }
+.event-img img { width: 100%; height: 100%; object-fit: cover; }
+.event-info { padding: 40px; width: 60%; display: flex; flex-direction: column; justify-content: center; }
+.event-info h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 10px; }
+.event-info p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+.event-date { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); }
+
+/* Testimonials */
+.testimonials { padding: 100px 0; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.testimonial-card { text-align: center; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.testimonial-card p { font-style: italic; font-size: 16px; margin-bottom: 20px; color: var(--ink); }
+.testimonial-card .author { font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--accent); letter-spacing: 2px; }
+
+/* Contact Section */
+.contact { padding: 100px 0; }
+.contact-card { background: var(--ink); color: var(--paper); border-radius: 30px; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+.contact-info { padding: 60px; background: rgba(253, 251, 247, 0.05); }
+.contact-info h2 { font-family: var(--font-display); font-size: 40px; margin-bottom: 20px; }
+.contact-info p { color: rgba(253, 251, 247, 0.6); margin-bottom: 40px; }
+.contact-details p { margin-bottom: 15px; font-weight: 500; color: var(--paper); }
+.contact-form { padding: 60px; display: flex; flex-direction: column; gap: 20px; }
+.contact-form input, .contact-form textarea { background: rgba(253, 251, 247, 0.1); border: 1px solid rgba(253, 251, 247, 0.1); padding: 15px 20px; border-radius: 12px; color: var(--paper); outline: none; font-family: inherit; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
 
 /* Footer */
 .footer {

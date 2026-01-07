@@ -10,7 +10,35 @@
     <script src="https://unpkg.com/@lucide/web"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="auth-locked">
+    <!-- Auth Overlay -->
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2 id="auth-title" data-i18n="auth_register_title">Create Account</h2>
+                <p id="auth-subtitle" data-i18n="auth_register_subtitle">Enter your details to get started</p>
+            </div>
+            <form id="auth-form" class="auth-form">
+                <div class="input-group" id="name-group">
+                    <label data-i18n="auth_name">Full Name</label>
+                    <input type="text" id="auth-name" placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="auth_email">Email Address</label>
+                    <input type="email" id="auth-email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label data-i18n="auth_password">Password</label>
+                    <input type="password" id="auth-password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="auth-submit" data-i18n="auth_register_btn">Register</button>
+            </form>
+            <div class="auth-footer">
+                <p id="auth-switch-text" data-i18n="auth_have_account">Already have an account? <a href="#" id="auth-switch" data-i18n="auth_login_link">Login</a></p>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">Glow<span>Skin</span></a>
@@ -101,56 +129,81 @@
         </section>
 
         <section id="shop" class="shop">
+            <!-- Existing Shop Content -->
+            ...
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="events">
             <div class="container">
-                <div class="shop-header">
-                    <div class="shop-title">
-                        <span class="subtitle" data-i18n="shop_subtitle">Our Shop</span>
-                        <h2 data-i18n="shop_title">Best Sellers</h2>
+                <div class="section-header">
+                    <span class="subtitle" data-i18n="events_subtitle">Upcoming Events</span>
+                    <h2 data-i18n="events_title">Experience Our World</h2>
+                </div>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1514525253361-bee8a187499b?auto=format&fit=crop&w=600&q=80" alt="Masterclass">
+                        </div>
+                        <div class="event-info">
+                            <h3 data-i18n="event1_title">Skincare Masterclass</h3>
+                            <p data-i18n="event1_desc">Learn the secrets of a perfect routine from our experts.</p>
+                            <span class="event-date">Jan 20, 2026</span>
+                        </div>
                     </div>
-                    <div class="shop-filters">
-                        <button class="active" data-i18n="shop_all">All</button>
-                        <button data-i18n="shop_face">Face</button>
-                        <button data-i18n="shop_body">Body</button>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="New Launch">
+                        </div>
+                        <div class="event-info">
+                            <h3 data-i18n="event2_title">Paris Collection Launch</h3>
+                            <p data-i18n="event2_desc">Be the first to try our new organic line.</p>
+                            <span class="event-date">Feb 05, 2026</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="product-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card" data-id="1" data-name="Pure Serum" data-price="45.00">
-                        <div class="product-img">
-                            <img src="images/product-1.jpg" alt="Pure Serum">
-                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
-                        </div>
-                        <div class="product-info">
-                            <span class="category">Hydration</span>
-                            <h3>Pure Serum</h3>
-                            <p class="price">$45.00</p>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p data-i18n="test1_content">"My skin has never looked so radiant. These products are a game changer."</p>
+                        <span class="author">— Emma L.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p data-i18n="test2_content">"Finally, organic skincare that actually delivers results. Highly recommend!"</p>
+                        <span class="author">— Marcus G.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p data-i18n="test3_content">"The hydration is incredible. My face feels soft and fresh all day long."</p>
+                        <span class="author">— Leila K.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h2 data-i18n="contact_title">Get In Touch</h2>
+                        <p data-i18n="contact_subtitle">We'd love to hear from you. Send us a message.</p>
+                        <div class="contact-details">
+                            <p>hello@glowskin.com</p>
+                            <p>+33 1 23 45 67 89</p>
+                            <p>Paris, France</p>
                         </div>
                     </div>
-                    <!-- Product 2 -->
-                    <div class="product-card" data-id="2" data-name="Night Cream" data-price="58.00">
-                        <div class="product-img">
-                            <img src="images/product-2.jpg" alt="Night Cream">
-                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
-                        </div>
-                        <div class="product-info">
-                            <span class="category">Repair</span>
-                            <h3>Night Cream</h3>
-                            <p class="price">$58.00</p>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="product-card" data-id="3" data-name="Morning Mist" data-price="32.00">
-                        <div class="product-img">
-                            <img src="images/product-3.jpg" alt="Morning Mist">
-                            <button class="quick-add" data-i18n="product_add">Quick Add</button>
-                        </div>
-                        <div class="product-info">
-                            <span class="category">Refresh</span>
-                            <h3>Morning Mist</h3>
-                            <p class="price">$32.00</p>
-                        </div>
-                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" data-i18n-placeholder="auth_name">
+                        <input type="email" placeholder="Email" data-i18n-placeholder="auth_email">
+                        <textarea placeholder="Message" rows="4"></textarea>
+                        <button type="submit" class="btn btn-primary" data-i18n="auth_register_btn">Send</button>
+                    </form>
                 </div>
             </div>
         </section>
